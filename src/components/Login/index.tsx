@@ -1,7 +1,9 @@
-import {EventHandler, ReactNode } from 'react';
+import {ReactNode } from 'react';
 import React,{Component,createRef} from 'react'
+import request from '../../utils/request'
 import '../../../assest/iconfont/iconfont.css'
 import './index.css'
+import {message} from 'antd'
 interface IProps {
     name:string
 }
@@ -49,10 +51,12 @@ interface SignForm {
     sPwRef = React.createRef<HTMLInputElement>()
     // 跳转注册
     handleToSignUp = ()=>{
-        let {page} = this.state;
+        let {page,pwDisplay} = this.state;
+        pwDisplay = false;
         page = 'signIn'
         this.setState({
-            page
+            page,
+            pwDisplay
         })
         if(this.loginBoxRef.current){
             this.loginBoxRef.current.className+=' right-panel-active';
@@ -61,10 +65,12 @@ interface SignForm {
     }
     // 跳转登录
     handleToSignIn = ()=>{
-        let {page} = this.state;
+        let {page,pwDisplay} = this.state;
+        pwDisplay = false;
         page = 'signUp'
         this.setState({
-            page
+            page,
+            pwDisplay
         })
         if(this.loginBoxRef.current){
             this.loginBoxRef.current.className='container';
@@ -119,28 +125,46 @@ interface SignForm {
             e.target.className = ""; 
         }
     }
+    //passworld isShow
     displayPw = (e:any)=>{
-        
         let {pwDisplay} = this.state;
-        pwDisplay=!pwDisplay
+        pwDisplay=!pwDisplay   
         if(!pwDisplay){
-            e.target.className ='iconfont icon-yanjing_xianshi' 
-            if(this.pwRef.current){
-                this.pwRef.current.type = 'text'
+
+            e.target.className ='iconfont icon-yanjing_xianshi'
+            if(this.state.page ==='signUp'){ 
+                this.pwRef.current&&(this.pwRef.current.type = 'text')
             }
-            console.log(this.pwRef.current);
+            else{
+                this.sPwRef.current&&(this.sPwRef.current.type = 'text')
+            }
             
         }
         else{
             e.target.className ='iconfont icon-yanjing_yincang' 
-            if(this.pwRef.current){
-                this.pwRef.current.type = 'password'
+            if(this.state.page==='signUp'){ 
+                this.pwRef.current&&(this.pwRef.current.type = 'password')
             }
+            else{
+                this.sPwRef.current&&(this.sPwRef.current.type = 'password')
+            }
+           
         }
         this.setState({
             pwDisplay
         })
 
+    }
+    //登录
+    handleLoign = async (e:any)=>{
+        e.preventDefault();
+        let res = await request('/login',this.state.loginForm);
+        console.log(res);
+        
+    }
+    handleRegister = async (e:any)=>{
+        e.preventDefault();
+        await request('/register',this.state.signForm,"POST");
     }
     render(): ReactNode {
         return (
@@ -195,7 +219,7 @@ interface SignForm {
                             />
                             <span data-placeholder='Confirm Password'></span>
                         </div>
-                        <button>注册</button>
+                        <button onClick={this.handleRegister}>注册</button>
                     </form>
                 </div>
                 {/* 登录 */}
@@ -227,7 +251,7 @@ interface SignForm {
                             ></i>
                         </div>
                         <a href='#'>忘记密码</a>
-                        <button>登录</button>
+                        <button onClick={this.handleLoign}>登录</button>
                     </form>
                 </div>
                 {/* 覆盖层 */}
