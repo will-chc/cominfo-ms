@@ -3,6 +3,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Login from './components/Login'
 import Home from './components/Home'
 import './App.css'
+import 'antd/dist/antd.css'
 
 function App() {
   const [count, setCount] = useState(0)

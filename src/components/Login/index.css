@@ -231,3 +231,18 @@ button.ghost {
 .txtb .iconfont{
     float: right;
 }
+.confirm-box{
+    display: inline-block;
+}
+.confirm-box input{
+    width: 50%;
+    float: left;
+}
+.confirm-box button{
+    float: right;
+    margin: 0;
+}
+.confirm-box button.focus {
+    background: inherit;
+    border-color: black;
+}
