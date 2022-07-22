@@ -1,15 +1,17 @@
-import {Button} from 'antd'
+import React,{Component,createRef,useEffect,useRef,useState,useContext,useReducer} from 'react'
 import request from '../../utils/request'
-interface IProps {
-    name:String
+interface IState {
+   name:string,
+   pwd:string,
+   isLoading:boolean,
+   error:string,
+   isLoggedIn:boolean
 }
-export default (props:IProps)=>{
-    function sendEmail(){
-        request('/api/email',{},'POST')
-    }
-    return (
-        <div className="wcontainer">
-            <Button onClick={sendEmail}>发送邮件</Button>
-        </div>
-    )
+interface Iaction {
+   type:string,
+   payload?:{}
 }
+const Home = ()=>{
+    
+}
+export default Home;

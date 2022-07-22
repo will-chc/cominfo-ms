@@ -47,9 +47,9 @@ interface SignForm {
     let [page,setPage] = useState<string>('signUp');
     let [pwDisplay,setpwDisplay] = useState<boolean>(false);
     // ref指向LoginBox
-    const loginBoxRef = React.createRef<HTMLDivElement>()
-    const pwRef = React.createRef<HTMLInputElement>()
-    const sPwRef = React.createRef<HTMLInputElement>()
+    const loginBoxRef = useRef<HTMLDivElement|null>(null)
+    const pwRef = useRef<HTMLInputElement|null>(null)
+    const sPwRef = useRef<HTMLInputElement|null>(null)
     //useRef,解决hook异步
     useEffect(()=>{
         loadingRef.current = loading; 
@@ -205,7 +205,7 @@ interface SignForm {
             handleToSignIn();
         });
     }
-    //
+    //获取验证码
     function getCode(){
             request('/api/email',{email:signForm.email},'GET').then(res=>{
                 console.log(res);
