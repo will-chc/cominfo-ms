@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-body{
+.login_page{
     font-family: 'Montserrat',sans-serif;
     background-image: linear-gradient(120deg,#3498db,#8e44ad);
     display: flex;

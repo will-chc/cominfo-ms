@@ -1,0 +1,23 @@
+.data_square {
+    width:20%;
+    margin-left: 2%;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.left_pic{
+    float: left;
+    width: 60px;
+    height: 80px;
+    background-color: rgb(236, 131, 205);
+    margin: 10px 10px;
+}
+.right_data{
+    float: right;
+    margin: auto 0;
+    width: 60px;
+    height: 80px;
+    background-color: rgb(236, 131, 205);
+    margin: 10px 10px;
+
+}

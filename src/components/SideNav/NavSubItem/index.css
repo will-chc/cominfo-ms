@@ -1,0 +1,25 @@
+.sub_group_show{
+    display: block;
+}
+.sub_group_hidden{
+    display: none;
+}
+span {
+    cursor: pointer;
+    font-size: 14px;
+}
+.nav_sub_title{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    padding: 0 24px;
+    line-height: 50px;
+    color: black!important;
+}
+
+.sub_group div{
+    background-color: rgb(238, 235, 235)
+}
+.sub_group li {
+    padding-left: 10px;
+}
