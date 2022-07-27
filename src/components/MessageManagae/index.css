@@ -1,0 +1,7 @@
+.m_container{
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+.message_list{
+    margin: 20px;
+}

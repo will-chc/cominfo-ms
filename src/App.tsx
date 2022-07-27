@@ -6,6 +6,7 @@ import './App.css'
 import 'antd/dist/antd.css'
 import Test from './components/Test'
 import HomePage from './components/HomePage'
+import MessageManagae from './components/MessageManagae'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +20,7 @@ function App() {
           <Route path='/' element={<HomePage/>} />
         </Route>
         <Route path='/message' element={<Home/>}>
-          <Route path='/message' element={<Test/>} />
+          <Route path='/message' element={<MessageManagae/>} />
         </Route>
       </Routes>
     </BrowserRouter>

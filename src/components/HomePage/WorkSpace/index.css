@@ -1,6 +1,8 @@
 .workspace{
     width: 100%;
     margin-top: 40px;
+    background-color: #fff;
+
 
 }
 .workspace_header{
@@ -15,4 +17,83 @@
     line-height: 40px;
     padding: 4px;
     font-weight: 600;
+}
+.content_top{
+    background-color: #fff;
+}
+.content_top .title{
+    padding-left: 40px;
+    padding-top: 20px;
+    font-weight: 700;
+    font-size: 28px;
+}
+.content_top .left {
+    float: left;
+}
+.content_top .right {
+    float: right;
+
+}
+.clearfix:after{/*伪元素是行内元素 正常浏览器清除浮动方法*/
+    content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+}
+.content_top .avatar{
+    margin:20px 30px 20px 34px;
+    float: left;
+}
+.left .text {
+    float: left;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.welcome_text{
+    font-size: 28px;
+    font-weight: 700;
+    
+}
+.tag{
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    color: rgb(192, 191, 189);
+}
+.tagList{
+    margin-right: 40px;
+}
+.taglist_item{
+    float: right;
+    width: 90px;
+    height: 110px;
+}
+.taglist_item .item_title{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(173, 169, 169);
+}
+.taglist_item .item_number{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+.dividing_line{
+    float: right;
+    margin: 10px 0;
+    height: 90px;
+    width: 2px;
+    background-color: rgb(167, 164, 164);
+}
+.content_top{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
 }

@@ -24,9 +24,14 @@ const SideNav: React.FC = () => {
             children: [
                 {
                     to: '/message',
-                    title: '信息管理',
+                    title: '公告查看',
                     children: []
-                }
+                },
+                {
+                    to: '/message/publish',
+                    title: '发布公告',
+                    children: []
+                },
             ]
         },
         {
@@ -91,7 +96,7 @@ const SideNav: React.FC = () => {
             <div className="nav_container">
                 <ul>
                     {list.map((item, index) => {
-                        if (item.children.length>1) {
+                        if (item.children.length > 1) {
                             return (
                                 <NavSubItem title={item.title} items={item.children} />
                             )

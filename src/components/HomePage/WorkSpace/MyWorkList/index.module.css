@@ -1,0 +1,61 @@
+.worklist_title {
+    padding-left: 40px;
+    padding-top: 20px;
+    font-weight: 700;
+    font-size: 28px;
+    border-bottom: 1px solid #ddd;
+}
+.worklist_container{
+    overflow: hidden;
+}
+.clearfix:after {
+    content: '';
+    height: 0px;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+.left {
+    float: left;
+    width: 60%;
+    margin-right: 2%;
+    height: 200px;
+
+}
+
+.right {
+    float: left;
+    width: 38%;
+    height: 200px;
+}
+
+.icon {
+    float: left;
+    margin: 20px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(22, 143, 241);
+}
+
+.content {
+    float: left;
+}
+
+.content .title {
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: 550;
+}
+.content .time{
+    margin-top: 5px;
+    font-size: 14px;
+    color: rgb(185, 185, 185);
+}
+.site_calendar_demo_card{
+    float: right;
+    width: 300px;
+    border: 1px solid #f0f0f0;
+    border-radius: 2px;
+}

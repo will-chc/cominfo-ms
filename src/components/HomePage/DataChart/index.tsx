@@ -13,7 +13,7 @@ const Echarts = () => {
           },
           series: [
             {
-              name: 'Access From',
+              name: '参与数据',
               type: 'pie',
               radius: ['40%', '70%'],
               avoidLabelOverlap: false,
