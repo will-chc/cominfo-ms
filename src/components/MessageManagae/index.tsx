@@ -23,7 +23,53 @@ function MessageManagae() {
                     id: '1',
                     title: '111',
                     author: 'jdklsjfal'
-                }
+                },
+                {
+                    id: '1',
+                    title: '111',
+                    author: 'jdklsjfal'
+                },
+                {
+                    id: '1',
+                    title: '111',
+                    author: 'jdklsjfal'
+                },
+                {
+                    id: '1',
+                    title: '111',
+                    author: 'jdklsjfal'
+                },
+                {
+                    id: '1',
+                    title: '111',
+                    author: 'jdklsjfal'
+                },
+                {
+                    id: '1',
+                    title: '111',
+                    author: 'jdklsjfal'
+                },
+                {
+                    id: '1',
+                    title: '111',
+                    author: 'jdklsjfal'
+                },
+                {
+                    id: '1',
+                    title: '111',
+                    author: 'jdklsjfal'
+                },
+                {
+                    id: '1',
+                    title: '111',
+                    author: 'jdklsjfal'
+                },
+                {
+                    id: '1',
+                    title: '111',
+                    author: 'jdklsjfal'
+                },
+                
             ]
             setData(asyncData);
         })();
@@ -52,7 +98,7 @@ function MessageManagae() {
         }
     ]
     function delecte(index) {
-        const n_data = data;
+        const n_data = [...data]
         n_data.splice(index,1)
         setData(n_data)
     }

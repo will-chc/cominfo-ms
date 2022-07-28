@@ -1,0 +1,9 @@
+.publish_container{
+    width: 100%;
+    height: calc(100vh- 60px );
+}
+
+.announcemetn_content{
+    margin: 40px;
+    width: 90%;
+}
